@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Currículum  - Salomón</title>
+    <title>Currículum - Salomón</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,7 +47,7 @@
                 transform: translateY(0);
             }
         }
-        .info-personal p, ul li {
+        .info-personal p, .section ul li {
             animation: fadeIn 1.5s ease forwards;
             opacity: 0;
         }
@@ -57,7 +57,7 @@
                 opacity: 1;
             }
         }
-        /* Añadir animación secuencial con retraso para lista de habilidades */
+        /* Añadir animación secuencial con retraso para lista de habilidades y experiencia */
         .section ul li:nth-child(1) { animation-delay: 1.6s; }
         .section ul li:nth-child(2) { animation-delay: 1.8s; }
         .section ul li:nth-child(3) { animation-delay: 2s; }
@@ -69,34 +69,56 @@
             transition: transform 0.3s ease, color 0.3s ease;
             cursor: default;
         }
+        /* Animación específica para datos de contacto con retrasos progresivos */
+        .contacto-animado p {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: aparecerArriba 0.8s forwards;
+            margin: 8px 0;
+            font-size: 16px;
+        }
+        .contacto-animado p:nth-child(1) { animation-delay: 0.5s; }
+        .contacto-animado p:nth-child(2) { animation-delay: 1s; }
+        .contacto-animado p:nth-child(3) { animation-delay: 1.5s; }
+        .contacto-animado p:nth-child(4) { animation-delay: 2s; }
+        /* Animación para ir apareciendo y subiendo */
+        @keyframes aparecerArriba {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Efecto hover para destacar en datos de contacto */
+        .contacto-animado p:hover {
+            color: #007BFF;
+            cursor: default;
+            transform: scale(1.05);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
     </style>
 </head>
 <body>
     <h1>[Tu Nombre Completo]</h1>
-    <div class="info-personal">
-        <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad, País</p>
-        <p><strong>Teléfono:</strong> +34 600 123 456</p>
-        <p><strong>Email:</strong> tu.email@ejemplo.com</p>
+    <div class="contacto-animado">
+        <p><strong>Dirección:</strong> Calle Zona F/23 de Enero, Caracas, Venezuela</p>
+        <p><strong>Teléfono:</strong> +58 414 356 86 66</p>
+        <p><strong>Email:</strong> salomonfcarrasco@gmail.com</p>
         <p><strong>LinkedIn:</strong> linkedin.com/in/tuusuario</p>
     </div>
 
     <div class="section">
         <h2>Perfil Profesional</h2>
-        <p>Profesional con experiencia en [tu área], especializado en [tus especialidades]. Apasionado por [tus intereses profesionales] y orientado a [tus habilidades clave].</p>
+        <p>Profesional con experiencia en Embebidos. Apasionado por la electronica y programacion, orientado a Desarrollo profesional en áreas de automatizacion.</p>
     </div>
 
     <div class="section">
         <h2>Experiencia Laboral</h2>
         <ul>
             <li>
-                <strong>Nombre Empresa</strong> - Cargo<br>
-                <em>Fecha inicio - Fecha fin</em><br>
-                Descripción breve de tus responsabilidades y logros.
+                <strong>Amagi Services</strong> - Desarrollador<br>
+                <em>05/04/2025 - 00/00/0000</em><br>
+                Pude culminar mis actividades de pasantias y obtener un cargo en el área de desarrollo de embebidos, donde trabajaba con microcontroladores, sensores, programaciones, etc.
             </li>
-            <li>
-                <strong>Nombre Empresa</strong> - Cargo<br>
-                <em>Fecha inicio - Fecha fin</em><br>
-                Descripción breve de tus responsabilidades y logros.
             </li>
         </ul>
     </div>
@@ -105,12 +127,9 @@
         <h2>Educación</h2>
         <ul>
             <li>
-                <strong>Nombre Institución</strong> - Título<br>
-                <em>Fecha inicio - Fecha fin</em>
+                <strong>Instituto Técnico Jesús Obrero</strong> - Tecnico medio industrial Mención Electronica<br>
+                <em>00/00/0000 - 29/07/2025</em>
             </li>
-            <li>
-                <strong>Nombre Institución</strong> - Título<br>
-                <em>Fecha inicio - Fecha fin</em>
             </li>
         </ul>
     </div>
