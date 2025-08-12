@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum Vitae - Salomón</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Currículum  - Salomón</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,22 +17,57 @@
             border-bottom: 2px solid #007BFF;
             padding-bottom: 5px;
             margin-top: 30px;
+            animation: slideIn 1s ease forwards;
+            opacity: 0;
+        }
+        /* Animación para que los títulos "entren" con movimiento desde la izquierda */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
         .section {
             margin-top: 20px;
+            animation: fadeInUp 1.2s ease forwards;
+            opacity: 0;
         }
-        .info-personal {
-            margin-bottom: 20px;
+        /* Animación para las secciones que se desvanecen y suben */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
+        .info-personal p, ul li {
+            animation: fadeIn 1.5s ease forwards;
+            opacity: 0;
         }
-        ul li {
-            margin-bottom: 8px;
+        /* Animación general para párrafos e ítems */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
-        .contacto p {
-            margin: 4px 0;
+        /* Añadir animación secuencial con retraso para lista de habilidades */
+        .section ul li:nth-child(1) { animation-delay: 1.6s; }
+        .section ul li:nth-child(2) { animation-delay: 1.8s; }
+        .section ul li:nth-child(3) { animation-delay: 2s; }
+        .section ul li:nth-child(4) { animation-delay: 2.2s; }
+        /* Animación suave al pasar el mouse sobre los ítems */
+        ul li:hover {
+            color: #007BFF;
+            transform: scale(1.05);
+            transition: transform 0.3s ease, color 0.3s ease;
+            cursor: default;
         }
     </style>
 </head>
